@@ -1,0 +1,125 @@
+#all{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: auto;  /* 100% of the viewport height */
+    margin: 100px;
+}
+
+.input-group {
+    display: flex;
+    flex-direction: column; /* This will ensure label is above input */
+    width: 100%;
+    margin-bottom: 20px; /* spacing between input groups */
+    max-width: 700px;
+}
+
+
+.input-group label {
+    margin-bottom: 10px; /* spacing between label and input */
+    font-weight: bold;
+}
+.input-group input {
+    width: 100%;
+    padding: 15px;
+    border-radius: 10px;
+    border: 1px solid gray;
+}   
+
+.buttonside {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+
+}
+
+button[type="submit"] {
+    padding: 10px 20px;
+    background-color: orange;
+    border: none;
+    color: white;
+    cursor: pointer;
+    border-radius: 5px;
+    width: 100%;
+    
+}
+
+button[type="submit"]:hover {
+    background-color: #ff7f00; /* a darker shade of orange */
+}
+
+#Registration{
+    color: gray;
+}
+
+.birthday-group {
+    display: flex;
+    justify-content: space-between;
+}
+
+.birthday-group input {
+    width: 30%; 
+    margin-right: 5%; 
+    padding: 15px;  
+}
+
+.birthday-group input:last-child {
+    margin-right: 0;
+}
+
+.error-message {
+    color: red;
+    font-size: 12px;
+    margin-top: 5px;
+}
+.checkbox-wrapper {
+    display: flex;
+    align-items: center;  /* Aligns items vertically in the center */
+    margin-top: -20px;
+    margin-bottom: 20px;
+}
+
+#all {
+    max-width: 640px; /* Added to make sure content doesn't stretch too much on wider screens */
+    width: 100%; /* Make sure it's full width on screens smaller than 640px */
+    margin: 0 auto; /* Center the container */
+}
+
+/* Font scaling for larger screens */
+@media (min-width: 641px) {
+    .input-group label {
+        font-size: 1.2em; /* Increase the font size */
+    }
+    
+    button[type="submit"] {
+        font-size: 1.2rem; /* Increase the button font size */
+    }
+
+    #all {
+        padding: 20px 50px; /* Increase the padding */
+    }
+}
+
+/* To center everything in the middle of the screen, especially for the 1136 height */
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100vh; /* Use the full height of the screen */
+    margin: 0; /* Removes default margin */
+}
+
+/* To handle smaller screens (less than 640px), let's make the birthday inputs stack */
+@media (max-width: 640px) {
+    .birthday-group {
+        flex-direction: column;
+    }
+    .birthday-group input {
+        width: 100%; 
+        margin-bottom: 10px; /* Spacing between stacked inputs */
+    }
+    .birthday-group input:last-child {
+        margin-bottom: 0; /* Removes bottom margin for the last input */
+    }
+}

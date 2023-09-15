@@ -1,0 +1,154 @@
+#all {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: auto;  /* 100% of the viewport height */
+    margin: 100px;  /* Removes default margin */
+}
+.select-wrapper {
+    position: relative;
+    display: inline-block;
+}
+
+.select-wrapper::after {
+    content: "▼";  /* This is a downward arrow symbol */
+    position: absolute;
+    right: 10px; 
+    top: 20%; 
+    transform: translateY(-50%);
+    pointer-events: none;  /* This ensures the dropdown is still clickable */
+    font-size: 1em;
+    color: #000; /* You can adjust this color if needed */
+    
+}
+
+#page1 {
+    display: flex;
+    align-items: center;  /* This will vertically center the children */
+    justify-content: start; /* This will align items to the start */
+}
+/* If you want the arrow to change color or style on hover: */
+.select-wrapper:hover::after {
+    color: orange;
+}
+
+#countryCode {
+    padding-bottom: 15px; /* To make space for the custom arrow */
+    padding-right: 40px;
+    border: none;
+    display: flex;
+    align-items: center;
+    border-bottom: 2px solid orange;
+    appearance: none;  /* For consistent styling across browsers */
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background-color: transparent; /* In case you want the background transparent */
+    /* ... any other styles you want ... */
+}
+#phoneNumber {
+    border: none;
+    border-bottom: 3px solid orange;
+    padding-bottom: 15px;
+    margin-left:20px;  /* Remove the side margins */
+    width: 80%;  /* Allow it to expand fully */
+    flex-shrink: 0;  /* This ensures the input won't get wider than this */
+}
+
+#countryCode:focus, #phoneNumber:focus {
+    border-bottom: 3px solid orange;
+    outline: none;  /* To remove the browser's default focus style */
+}
+
+.buttonside {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;  /* Add some space between the input and the button */
+    width: 80%;  /* Adjust as per requirement */
+    max-width: 300px;
+}
+
+#submitPhoneNumber {
+    background-color: orange;  /* Using the same color scheme */
+    color: #ffffff;  /* Text color */
+    border: none;
+    padding:20px;  /* Vertical and horizontal padding */
+    border-radius: 30px;  /* Rounded corners */
+    font-size: 1rem;
+    width: 100%;
+    cursor: pointer;  /* Change the cursor on hover */
+    transition: background-color 0.3s ease;  /* Smooth transition for hover effect */
+}
+
+#submitPhoneNumber:hover {
+    background-color: #ff7f00;  /* Slightly darker orange on hover */
+}
+
+#logosite{
+    margin-bottom: 50px;
+}
+#welcome h1{
+    color: gray;
+    font-size: 3em;
+    margin-top: 10px;
+    margin-bottom: 0px;
+}
+
+#welcome h2{
+    color:orange;
+    font-size: 1em;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    
+}
+
+#phoneForm {
+    width: 100%; /* Makes sure the form takes up the full width of its parent container */
+    display: flex;
+    flex-direction: column; /* Stacks children vertically */
+    align-items: center; /* Centers children horizontally */
+}
+
+#tickIcon{
+    width: 20px;
+    height: 20px;
+    background-image: url('images/tick.png'); /* Replace with your tick icon image */
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: none;
+}
+/* For the all container */
+#all {
+    max-width: 640px; /* Added to make sure content doesn't stretch too much on wider screens */
+    width: 100%; /* Make sure it's full width on screens smaller than 640px */
+    margin: 0 auto; /* Center the container */
+}
+
+/* Font scaling for larger screens */
+@media (min-width: 641px) {
+    #welcome h1 {
+        font-size: 4em; /* Increase the font size */
+    }
+    
+    #welcome h2 {
+        font-size: 1.5em; /* Increase the font size */
+    }
+    
+    #submitPhoneNumber {
+        font-size: 1.2rem; /* Increase the button font size */
+    }
+
+    #all {
+        padding: 20px 50px; /* Increase the padding */
+    }
+}
+
+/* To center everything in the middle of the screen, especially for the 1136 height */
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100vh; /* Use the full height of the screen */
+    margin: 0; /* Removes default margin */
+}

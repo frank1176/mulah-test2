@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="page2.css">
+    <script src="script2.js" defer></script>
+    <title>Loyalty Points - Registration</title>
+</head>
+<body>
+    <div id="all">
+        <div id="logosite">
+            <img src="images/Mulah_logo.png" alt="">
+        </div>
+
+        <section id="Registration">
+            <h1>Registration</h1>
+            <h3>Please fill up your details</h3>
+        </section>
+
+        <form id="registrationForm">
+            <div class="input-group">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" placeholder="Enter your full name" >
+                <span class="error-message" id="nameError"></span>
+            </div>
+
+            <div class="input-group">
+                <label for="birthday">Birthday:</label>
+                <div class="birthday-group">
+                    <input type="number" id="day" name="day" placeholder="DD"  min="1" max="31">
+                    <input type="number" id="month" name="month" placeholder="MM"  min="1" max="12">
+                    <input type="number" id="year" name="year" placeholder="YYYY"  min="1900" max="2999">
+                </div>
+                <span class="error-message" id="birthdayError"></span>
+            </div>
+
+            <div class="input-group">
+                <label for="email">Email Address:</label>
+                <input type="email" id="email" name="email" placeholder="Enter your email address" >
+                <span class="error-message" id="emailError"></span>
+                
+            </div>
+            <div class="checkbox-wrapper">
+                <input type="checkbox" id="skipEmailCheck" name="skipEmailCheck">
+                <label for="skipEmailCheck">Skip email checking</label>
+            </div>
+            <div class="buttonside">
+                <button type="submit">Continue</button>
+            </div>
+        </form>
+    </div>
+</body>
+</html>

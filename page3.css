@@ -1,0 +1,61 @@
+/* Universal styles */
+* {
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* Center everything in the main container */
+#all {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: auto; 
+    margin: 0 auto;
+    max-width: 700px;
+    padding: 20px;
+    background-color: #F7F7F7; /* a light gray background similar to your previous design (feel free to change this) */
+    border-radius: 10px;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.2); /* subtle shadow for depth */
+}
+
+h1 {
+    color: gray;
+    margin-bottom: 20px;
+}
+
+.display-group {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+label {
+    font-weight: bold;
+    color: #555;
+    width: 40%;
+}
+
+span {
+    width: 50%;
+    color: #333;
+    text-align: right;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: orange;
+    border: none;
+    color: white;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-top: 20px;
+}
+
+button:hover {
+    background-color: #ff7f00; /* a darker shade of orange */
+}
